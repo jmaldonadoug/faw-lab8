@@ -1,0 +1,24 @@
+<mat-card style="margin-top: 15px; max-width: 550px;">
+    <mat-card-header style="margin-bottom: 15px;">
+        <mat-card-title>Crear mascota</mat-card-title>
+    </mat-card-header>
+    <mat-card-content [formGroup]="form">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input matInput placeholder="Nombre" formControlName="nombre" autocomplete="off">
+        </mat-form-field>
+
+        <div>
+            <label>Raza: </label>
+            <mat-radio-group formControlName="raza">
+                <mat-radio-button value="Perro">Perro</mat-radio-button>
+                <mat-radio-button value="Gato">Gato</mat-radio-button>
+                <mat-radio-button value="Hamster">Hamster</mat-radio-button>
+            </mat-radio-group>
+        </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-button (click)="insert()">Agregar mascota</button>
+    </mat-card-actions>
+</mat-card>
